@@ -19,6 +19,19 @@ class Database
         }
     }
 
+    public function tampil_semua_data()
+    {
+        $query = $this->conn->prepare("select id_barang,nama_barang from barang order by id_barang");
+        $query->execute();
+
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $data;
+
+        $query->closeCursor();
+        unset($data);
+    }
+
     public function tampil_data($id_barang)
     {
         $query = $this->conn->prepare("select id_barang,nama_barang from barang where id_barang=?");
@@ -31,18 +44,7 @@ class Database
         unset($id_barang, $data);
     }
 
-    public function tampil_semua_data()
-    {
-        $query = $this->conn->prepare("select id_barang,nama_barang from barang order by id_barang");
-        $query->execute();
 
-        $data = $query->fetchAll(PDO::FETCH_ASSOC);
-       
-        return $data;
-
-        $query->closeCursor();
-        unset($data);
-    }
 
     public function tambah_data($data)
     {

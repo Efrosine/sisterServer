@@ -5,6 +5,7 @@ require_once('Database.php');
 
 $server = new nusoap_server();
 
+
 $server->configureWSDL('WSDL Toko', 'urn:ServerWSDL');
 $server->register(
     'tampil_semua_data',
@@ -13,7 +14,7 @@ $server->register(
     'urn:ServerWSDL',
     'urn:ServerWSDL#tampil_semua_data',
     'rpc',
-    'encode',
+    'encoded',
     'tampil semua data'
 );
 $server->register(
@@ -23,7 +24,7 @@ $server->register(
     'urn:ServerWSDL',
     'urn:ServerWSDL#tampil_data',
     'rpc',
-    'encode',
+    'encoded',
     'tampil data'
 );
 $server->register(
@@ -33,7 +34,7 @@ $server->register(
     'urn:ServerWSDL',
     'urn:ServerWSDL#tambah_data',
     'rpc',
-    'encode',
+    'encoded',
     'tambah data'
 );
 $server->register(
@@ -43,7 +44,7 @@ $server->register(
     'urn:ServerWSDL',
     'urn:ServerWSDL#ubah_data',
     'rpc',
-    'encode',
+    'encoded',
     'ubah data'
 );
 $server->register(
@@ -53,7 +54,7 @@ $server->register(
     'urn:ServerWSDL',
     'urn:ServerWSDL#hapus_data',
     'rpc',
-    'encode',
+    'encoded',
     'hapus data'
 );
 
