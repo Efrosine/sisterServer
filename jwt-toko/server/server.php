@@ -125,4 +125,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($data->id_pengguna) and isset
     echo json_encode(array('message' => 'Access denied 3'));
 }
 
-unset($abc, $postdata, $data, $data2, $token, $key, $issued_at, $expiration_time, $issuer, $jwt, $decoded, $id_barang, $nama_barang, $$aksi, $e);
+unset($abc, $postdata, $data, $data2, $token, $key, $issued_at, $expiration_time, $issuer, $jwt, $decoded, $id_barang, $nama_barang, $aksi, $e);
