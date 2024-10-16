@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($data->id_pengguna) and isset
         echo json_encode($data2);
     } catch (Exception $e) {
         http_response_code(401);
-        echo json_encode(array('message' => 'Access Denied'));
+        echo json_encode(array('message' => 'Access Denied $e'));
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $jwt = $_GET['jwt'];
